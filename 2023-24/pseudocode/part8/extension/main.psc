@@ -1,23 +1,22 @@
-DECLARE numbers ARRAY[10] OF INTEGER
+DECLARE numbers ARRAY[1:10] OF INTEGER
 DECLARE number_input INTEGER
 
-FOR i = 0 TO 9
-  numbers[i] = i + 1
-END FOR
+FOR i <- 0 TO 9
+  numbers[i] <- i + 1
+NEXT i
 
-PRINT "Enter a number: "
+OUTPUT "Enter a number: "
 INPUT number_input
 
-FOUND = FALSE
+FOUND <- FALSE
 
-FOR i = 0 TO 9
-  IF numbers[i] == number THEN
-    FOUND = TRUE
-    PRINT "Number found at index:", i
-    BREAK
+FOR i <- 0 TO 9
+  IF numbers[i] == number AND NOT FOUND THEN
+    FOUND <- TRUE
+    OUTPUT "Number found at index:", i
   ENDIF
-ENDFOR
+NEXT i
 
 IF NOT FOUND THEN
-  PRINT "Number not found"
+  OUTPUT "Number not found"
 ENDIF
