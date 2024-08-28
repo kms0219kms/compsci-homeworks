@@ -15,13 +15,11 @@ def main():
         largerNumber = number2
 
     # Output the larger number with a suitable message
-    # Just for the sake of the output, if the number is a whole number, remove the decimal point
     if number1 == number2:
         print("The two numbers are equal.")
-    elif (str(largerNumber)[-2:] == ".0"):
-        print("The larger number is:", int(largerNumber))
     else:
         print("The larger number is:", largerNumber)
+
 
 if __name__ == "__main__":
     main()
