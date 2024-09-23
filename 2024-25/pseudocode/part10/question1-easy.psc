@@ -1,0 +1,1 @@
+DECLARE scores: ARRAY[1:10] OF INTEGER

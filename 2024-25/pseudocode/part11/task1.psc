@@ -1,0 +1,1 @@
+DECLARE alphabets : ARRAY[1:3, 1:3] OF CHAR

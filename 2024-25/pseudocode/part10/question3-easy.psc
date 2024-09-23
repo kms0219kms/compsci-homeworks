@@ -1,0 +1,1 @@
+OUTPUT days[3]
