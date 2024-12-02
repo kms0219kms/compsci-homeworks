@@ -13,9 +13,9 @@
 def main():
     sequence: list[int] = [24]  # first term in the sequence is 24
 
-    while (
-        sum(sequence) <= 1000
-    ):  # sequence number should be at least 1000, so repeat until sum of sequence is greater than 1000
+    # sequence number should be at least 1000, so repeat until sum of sequence is greater than 1000
+    # It should be `<`, becuase it is pre-condition loop
+    while sum(sequence) < 1000:
 
         if sequence[-1] % 2 == 0:  # if the last element in the sequence is even
             sequence.append(sequence[-1] // 2)  # divide it by 2
